@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios de Ingreso</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Ingreso de Productos</h1>
+          <form method="post" action="/api/productos/guardar">
+            <div class="form-group">
+              <label for="title">Producto</label>
+              <input type="text" class="form-control" name="title" placeholder="El titulo">
+              <small id="titleHelp" class="form-text text-muted">Es lo que representa al producto.</small>
+            </div>
+            <div class="form-group">
+                <label for="price">Precio</label>
+                <input type="text" class="form-control" name="price" placeholder="El precio">
+                <small id="priceHelp" class="form-text text-muted">El precio del producto</small>
+            </div>
+            <div class="form-group">
+                <label for="thumbnail">Link Imagen</label>
+                <input type="url" class="form-control" name="thumbnail" placeholder="El link a la imagen">
+                <small id="thumbnailHelp" class="form-text text-muted">Imagen del producto.</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Grabar</button>
+          </form>
+
+          <p class="lead">esta informacion es registrada en memoria.</p>
+        </div>
+      </div>
+
+    
+
+</body>
+
+</html>
