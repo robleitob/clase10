@@ -3,6 +3,7 @@
 class Productos{
     constructor(){
         this.productos = [];
+        this.id = 0;
     }
 
     listarTodos(){        
@@ -19,9 +20,10 @@ class Productos{
 
     guardarProd(obj){
         try {
-            const largo = this.productos.length;
-            this.productos.push({...obj,id:largo+1});
-            return this.productos[largo];    
+            //const largo = this.productos.length;
+            //this.productos.push({...obj,id:largo+1});
+            this.productos.push({...obj,id:this.id++});
+            //return this.productos[largo];    
         } catch (error) {
             return [{
                 error: error
@@ -44,9 +46,10 @@ class Productos{
     actualizarProd(id, obj){
         try {
             const indice = this.productos.findIndex(item => item.id == id);
-            this.productos[indice].title = obj.title;
+            /* this.productos[indice].title = obj.title;
             this.productos[indice].price = obj.price;
-            this.productos[indice].thumbnail = obj.thumbnail;
+            this.productos[indice].thumbnail = obj.thumbnail; */
+            this.productos[indice] = obj;
             return this.productos[indice];
         } catch (error) {
             return [{

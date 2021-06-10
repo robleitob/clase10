@@ -12,7 +12,6 @@ router.get('/', (req, res) => {
 });
 
 //Rutas de Productos
-
 router.get('/productos', (req, res) => {
     try {
         res.status(200).send(objProductos.listarTodos());    
