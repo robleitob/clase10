@@ -29,6 +29,10 @@ router.get('/productos/vista', (req, res) => {
     res.render('main', { productos: objProductos.listarTodos(), hayProductos});
 });
 
+/* router.get('/productos/vistapug', (req, res) => {
+    res.render('main', { mensaje: 'Estoy usando pug'});
+}); */
+
 router.get('/productos/:id', (req, res) => {
     try {
         res.send(objProductos.listarPorId(parseInt(req.params.id)));

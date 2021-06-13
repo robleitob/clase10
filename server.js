@@ -16,7 +16,7 @@ app.engine('hbs', handlebars({
 }));
 
 // indico que usaré el motor de plantillas (esta es la rama de pug)
-app.set('view engine', 'hbs');
+app.set('view engine', 'pug');
 
 app.set('views','./views');
 
