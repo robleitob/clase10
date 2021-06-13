@@ -15,7 +15,7 @@ app.engine('hbs', handlebars({
     partialsDir: __dirname + '/views/partials/'
 }));
 
-// indico que usaré el motor de plantillas
+// indico que usaré el motor de plantillas (esta es la rama de pug)
 app.set('view engine', 'hbs');
 
 app.set('views','./views');
