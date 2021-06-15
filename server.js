@@ -8,12 +8,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
 //Configuraciones de handlebars
-app.engine('hbs', handlebars({
+/* app.engine('hbs', handlebars({
     extname: '.hbs',
     defaultLayout: 'index.hbs',
     layoutsDir: __dirname + '/views/layouts',
     partialsDir: __dirname + '/views/partials/'
-}));
+})); */
 
 // indico que usaré el motor de plantillas (esta es la rama de pug)
 app.set('view engine', 'pug');
