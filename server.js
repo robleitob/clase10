@@ -7,16 +7,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
-//Configuraciones de handlebars
-app.engine('hbs', handlebars({
-    extname: '.hbs',
-    defaultLayout: 'index.hbs',
-    layoutsDir: __dirname + '/views/layouts',
-    partialsDir: __dirname + '/views/partials/'
-}));
-
 // indico que usaré el motor de plantillas
-app.set('view engine', 'hbs');
+app.set('view engine', 'ejs');
 
 app.set('views','./views');
 
